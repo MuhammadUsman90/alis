@@ -221,7 +221,7 @@ function packages_sdkman() {
     print_step "packages_sdkman()"
 
     if [ "$PACKAGES_SDKMAN_INSTALL" == "true" ]; then
-        pacman_install "zip unzip"
+        pacman_install "zip"
         execute_user "curl -s https://get.sdkman.io | bash"
 
         if [ -n "$PACKAGES_SDKMAN" ]; then
